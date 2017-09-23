@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) != 2 {
-		log.Fatal("usage: git lock <remote>")
+		log.Fatal("usage: git lock-remote <remote>")
 	}
 
 	out, err := exec.Command("git", "config", fmt.Sprintf("remote.%s.pushurl", os.Args[1]), "no_push").Output()
